@@ -1,0 +1,31 @@
+dictnilaisiswa = {
+        "Ahmad" : 100,
+        "Budi" : 87,
+        "Cahya" : 95,
+        "Dina" : 90,
+        "Erna" : 76,
+        "Fajar" : 65,
+        "Galih" : 68,
+        "Harya" : 79,
+        }
+
+jumlah = 0
+n = 0
+nilai_maksimal = float('-inf')
+nilai_minimal = float('inf')
+nama = ''
+nama1 = ''
+
+for x,y in dictnilaisiswa.items():
+    jumlah += y
+    n += 1
+    if y > nilai_maksimal:
+        nilai_maksimal = y
+        nama = x
+    if y < nilai_minimal:
+        nilai_minimal = y
+        nama1 = x
+
+print("Rata-rata nilai siswa adalah " + str(jumlah/n) + ".")
+print("Nilai tertinggi siswa adalah " + str(nilai_maksimal) + ' milik ' + nama +".")
+print("Nilai terendah siswa adalah " + str(nilai_minimal) + ' milik ' + nama1 + ".")
